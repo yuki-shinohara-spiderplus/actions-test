@@ -1,0 +1,20 @@
+name: Build for AWS environment
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: '環境を選択してください'
+        required: true
+        default: 'dev'
+        type: choice
+        options:
+          - dev
+          - stg
+          - prd
+jobs:
+  print-inputs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print
+        run: echo "selected environment is [" ${ inputs.environment }} "] ."
