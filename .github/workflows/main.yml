@@ -19,11 +19,11 @@ jobs:
       - name: print
         run: echo "selected environment is [" ${{ inputs.environment }} "] ."
       - name: Dev環境向け
-        if: ${{ inputs.environment }} == 'dev'
+        if: ${{ inputs.environment == ''dev }}
         run: echo 'build for dev.'
       - name: Stg環境向け
-        if: ${{ inputs.environment }} == 'stg'
+        if: ${{ inputs.environment == 'stg' }}
         run: echo 'build for stg.'
       - name: Prd環境向け
-        if: ${{ inputs.environment }} == 'prd'
+        if: ${{ inputs.environment == 'prd' }}
         run: echo 'build for prd.'
