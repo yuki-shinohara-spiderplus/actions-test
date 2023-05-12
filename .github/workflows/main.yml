@@ -1,4 +1,4 @@
-name: Build for AWS environment
+name: Test for inputs.
 
 on:
   workflow_dispatch:
