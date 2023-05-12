@@ -17,4 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: print
-        run: echo "selected environment is [" ${ inputs.environment }} "] ."
+        run: echo "selected environment is [" ${{ inputs.environment }} "] ."
+      - name: for dev
+        if: ${{ inputs.environment }} == 'dev'
+        run: echo 'build for dev.'
